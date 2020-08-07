@@ -3,7 +3,7 @@
 @section('title', 'Planos')
 
 @section('content_header')
-    <h1>Planos <a href="{{ route('plans.create') }} " class="btn btn-dark">ADD</a></h1>
+    <h1>Planos <a href="{{ route('plans.create') }}" class="btn btn-dark">ADD</a></h1>
 @stop
 
 @section('content')
@@ -28,7 +28,7 @@
                                     {{ $plan->name}}
                                 </td>
                                 <td>
-                                    {{ $plan->price}}
+                                     {{ number_format($plan->price,2,',','.')}}
                                 </td>
                                 <td style="width=10px;">
                                     <a href="" class="btn btn-warning">VER</a>
