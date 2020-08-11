@@ -19,7 +19,7 @@
                 <li>
                     <strong>Preço: </strong> {{ number_format($plan->price,2,',','.') }}
                 </li>
-                <li>
+                 <li>
                     <strong>Descrição: </strong> {{ $plan->description }}
                 </li>
             </ul>
@@ -27,7 +27,7 @@
         <form action="{{ route('plans.destroy', $plan->url) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit" CLASS="btn btn-danger"> Deletar o Plano {{ $plan->name }} </button>
+            <button type="submit" CLASS="btn btn-danger"><i class="fas fa-trash"></i> Deletar o Plano {{ $plan->name }} </button>
         </form>
         </div>
     </div>
